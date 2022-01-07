@@ -1,0 +1,145 @@
+/************************************************************
+外付けCamera使うための 追加 code
+************************************************************/
+	ofSetFrameRate(30);
+	
+	cam.setDeviceID(1);
+	cam.setDesiredFrameRate(30);
+	cam.initGrabber(CAM_WIDTH, CAM_HEIGHT);
+
+/************************************************************
+紹介したexample
+************************************************************/
+example-blur
+Canny
+
+example-background
+example-coherent-lines
+	data
+
+example-contours-basic
+example-contours-color
+example-contours-advanced
+example-contours-quad
+example-contours-tracking
+
+example-difference
+	toCv
+example-difference-columns
+
+example-edge
+
+example-face
+	xml
+	of_v0.11.2_osx_release/examples/computer_vision/opencvHaarFinderExample/bin/data 
+example-face-follow
+	img
+
+
+example-flow
+example-flow-distort
+
+example-threshold
+
+/************************************************************
+openCv on oF
+************************************************************/
+ ■OpenFrameWorksでOpenCVを使う
+	https://qiita.com/Teppei113/items/92c4d0dc93f6b4d9684c
+	
+	■openFrameworksでOpenCV3を使う
+		https://qiita.com/ogsn/items/d4493446ba3e5e292753
+
+■Media Art II 2013 第6回：openFrameworks Addonを使う 2 - ofxOpenCV と ofxCv
+	https://www.slideshare.net/tado/media-art-ii-2013-6openframeworks-addon-2-ofxopencv-ofxcv
+	
+	contents
+		yoppa
+
+	■第11回: openFrameworks – 映像を使ったインタラクション ofxOpenCv、ofxCv
+		https://yoppa.org/teu_interactive18/9635.html
+		
+■ofxCvのexample-flowについて調べる
+	https://aa-deb.hatenablog.com/entry/2015/11/15/ofxcv%25e3%2581%25aeexample-flow%25e3%2581%25ab%25e3%2581%25a4%25e3%2581%2584%25e3%2581%25a6%25e8%25aa%25bf%25e3%2581%25b9%25e3%2582%258b/
+	contents
+		画像ピラミッドを利用したLucas-Kanade法（LK法）
+			疎な特徴集合に対するオプティカルフローを求める
+			ofxCv::FlowPyrLK
+		Gunnar Farnelback法
+			密なオプティカルフローを求める
+			ofxCv::FlowFarneback
+
+■ofxCv
+	https://github.com/kylemcdonald/ofxCv
+	
+	note
+		Your linker will also need to know where the OpenCv headers are. In XCode this means modifying one line in Project.xconfig:
+			HEADER_SEARCH_PATHS = $(OF_CORE_HEADERS) "../../../addons/ofxOpenCv/libs/opencv/include/" "../../../addons/ofxCv/libs/ofxCv/include/"
+			
+■openFrameworksのAddon、ofxCvの導入メモ
+	https://qiita.com/nenjiru/items/50325fabe4c3032da270
+	
+	contents
+		導入時に、一手間 必要.
+		
+■ofxCvを使ってwebカメラの映像をぼかしたりグレーにしたり輪郭取ったり
+	https://blanktar.jp/blog/2016/05/ofxcv-blur-grayscale-and-edge.html
+	
+■Kill camera process
+	> sudo killall VDCAssistant
+
+■ofxCvのexamplesを実行する
+	https://aa-deb.hatenablog.com/entry/2015/11/15/ofxcv%25e3%2581%25aeexamples%25e3%2582%2592%25e5%25ae%259f%25e8%25a1%258c%25e3%2581%2599%25e3%2582%258b/
+
+■cv2.Canny(): Canny法によるエッジ検出の調整をいい感じにする
+	https://qiita.com/Takarasawa_/items/1556bf8e0513dca34a19
+	
+■Canny Edge Detection
+	https://docs.opencv.org/3.4/da/d22/tutorial_py_canny.html
+	
+■勾配，エッジ，コーナー
+	http://opencv.jp/sample/gradient_edge_corner.html
+
+/************************************************************
+Mat
+************************************************************/
+■OpenCV の Mat ってやつの話
+	https://shimikel.hatenablog.com/entry/2015/07/25/190139
+	
+	■OpenCVでまずやること『Mat』
+		http://gori-naru.blogspot.com/2012/11/opencvmat.html
+
+■1 cv::Matの基本処理
+	https://book.mynavi.jp/support/pc/opencv2/c3/opencv_mat.html
+
+■OpenCV 画像処理演習 ― 行列編
+	http://cvwww.ee.ous.ac.jp/opencv_practice3/
+
+/************************************************************
+optical flow
+************************************************************/
+■オプティカルフロー(Optical Flow)
+	http://labs.eecs.tottori-u.ac.jp/sd/Member/oyamada/OpenCV/html/py_tutorials/py_video/py_lucas_kanade/py_lucas_kanade.html
+	contents
+	-	疎密
+	
+■オプティカルフロー法の概略を教えてください。
+	http://www.ft-r.jp/qa/ans/03_000_0008.html
+	
+■【オプティカルフローとは】推定の原理・特徴・計算式
+	https://algorithm.joho.info/image-processing/optical-flow/
+
+/************************************************************
+テイラー展開
+************************************************************/
+■テイラー展開
+	https://eman-physics.net/math/taylor.html
+	
+	■多変数関数のテイラー展開
+		https://eman-physics.net/math/taylor_multi.html
+
+■テイラー展開・マクローリン展開とは【解析的な関数と具体例】
+	https://mathlandscape.com/taylor-expansion/
+
+
+
